@@ -1,10 +1,8 @@
 
 void main() {
 
-    IO.println(String.format("Hello and welcome!"));
+    Chair cadeiraX = new Chair("wood", 10, "Nuno");
 
-    chair cadeiraX = new chair();
-    chair.material = "wood";
-
+    IO.println(cadeiraX);
 
 }
