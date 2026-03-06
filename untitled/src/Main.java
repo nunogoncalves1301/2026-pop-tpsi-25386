@@ -1,7 +1,7 @@
 class Main {
     public static void main(String[] args) {
 
-        Veiculo v1 = new Veiculo();
+        veiculo v1 = new veiculo();
         v1.setMarca  ("Ford ");
         v1.setModelo ("Raptor ");
         v1.setAno (2020);

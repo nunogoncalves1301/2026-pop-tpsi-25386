@@ -1,10 +1,14 @@
- class Veiculo {
+public class veiculo {
 
      //Atributos//
      private String marca;
      private String modelo;
      private int ano;
      private double preco;
+
+     public veiculo(){
+
+     }
 
      public void setMarca(String marca) {
          this.marca = marca;
