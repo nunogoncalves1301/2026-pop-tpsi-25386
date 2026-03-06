@@ -1,8 +1,8 @@
 
 void main() {
 
-    Chair cadeiraX = new Chair("wood", 10, "Nuno");
+    Chair cadeiraY = new Chair("Wood", 5, "Nuno");
 
-    IO.println(cadeiraX);
+    IO.println(cadeiraY);
 
 }

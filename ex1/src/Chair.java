@@ -4,7 +4,7 @@ public class Chair {
     String material;
     int price;
 
-    //class cosntructor
+    //class constructor
     Chair(String material , int price, String nome) {
         this.material = material;
         this.price = price;
