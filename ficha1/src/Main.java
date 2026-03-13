@@ -1,16 +1,30 @@
 class Main {
-    public static void main(String[] args) {
+        public static void main(String[] args) {
 
-        veiculo v1 = new veiculo();
-        v1.setMarca  ("Ford ");
-        v1.setModelo ("Raptor ");
-        v1.setAno (2020);
-        v1.setPreco (50.999);
+            Stand stand = new Stand();
 
-       System.out.println(v1.apresentar());
+            Veiculo v1 = new Veiculo("BMW", "X5");
+            Veiculo v2 = new Veiculo("Audi", "A3");
+            Veiculo v3 = new Veiculo("Tesla", "Model 3");
 
+            stand.adicionarVeiculo(v1);
+            stand.adicionarVeiculo(v2);
+            stand.adicionarVeiculo(v3);
 
+            // obter veículo pelo modelo
+            Veiculo encontrado = stand.obterVeiculo("A3");
+            if (encontrado != null) {
+                System.out.println("Veículo encontrado: " + encontrado);
+            }
 
+            // quantidade de veículos
+            System.out.println("Quantidade de veículos: " + stand.obterQuantidadeVeiculos());
 
+            // listar veículos de uma marca
+            stand.listarVeiculos("BMW");
+
+        }
     }
-}
+
+
+

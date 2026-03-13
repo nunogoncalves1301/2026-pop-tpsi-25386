@@ -1,4 +1,4 @@
-public class veiculo {
+public class Veiculo {
 
      //Atributos//
      private String marca;
@@ -6,8 +6,9 @@ public class veiculo {
      private int ano;
      private double preco;
 
-     public veiculo(){
-
+     public Veiculo(String marca, String modelo) {
+         this.marca = marca;
+         this.modelo = modelo;
      }
 
      public void setMarca(String marca) {
@@ -54,7 +55,7 @@ public class veiculo {
          // devolver o valor com o desconto.
          return preco - desconto;
      }
-
+""
      public String apresentar() {
          return "Marca: " + marca +
                  " \nModelo: " + modelo +
@@ -62,5 +63,10 @@ public class veiculo {
                  " \nPreço: " + preco +
                  " \nPreço desconto: " + getPrecoVeiculo(2026);
      }
+
+    @Override
+    public String toString() {
+        return "Marca: " + this.marca + " | Modelo: " + this.modelo;
+    }
  }
 
