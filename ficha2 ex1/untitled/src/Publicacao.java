@@ -1,51 +1,33 @@
 public class Publicacao {
     private String nome;
-    private static int quantidadePublicacoes;
+    private static int quantidadePublicacoes = 0; // Variável de classe (static)
     private int numeroPublicacao;
 
-//IV- Construtor
-
+    // Construtor: gera o ID único automaticamente
     public Publicacao() {
-        // Igualar o ID ao valor atual do contador
         this.numeroPublicacao = quantidadePublicacoes;
-        // Incrementar o contador global
         quantidadePublicacoes++;
     }
 
-    public String getNome() {
-        return nome;
+    // Getters e Setters
+    public String getNome() { return nome; }
+    public void setNome(String nome) { this.nome = nome; }
+
+    public int getNumeroPublicacao() { return numeroPublicacao; }
+    // Não criamos setter para numeroPublicacao para garantir que o ID é unico
+
+    //  Mostra informação base
+    public void mostraInformacao() {
+        System.out.println("ID: " + numeroPublicacao + " | Nome: " + nome);
     }
 
-    public void setNome(String nome) {
+    // Introduzir dados (recebe o nome)
+    public void introduzirDados(String nome) {
         this.nome = nome;
     }
 
-    public int getQuantidadePublicacoes() {
+    // Devolve o total de publicações criadas
+    public static int obterQuantidadePublicacoes() {
         return quantidadePublicacoes;
-    }
-
-    public void setQuantidadePublicacoes(int quantidadePublicacoes) {
-        this.quantidadePublicacoes = quantidadePublicacoes;
-    }
-
-    public int getNumeroPublicacao() {
-        return numeroPublicacao;
-    }
-
-    public void setNumeroPublicacao(int numeroPublicacao) {
-        this.numeroPublicacao = numeroPublicacao;
-    }
-    public void mostraInformacao(){
-        System.out.println("Numero publicações: " + this.numeroPublicacao);
-        System.out.println("Quantidade: " + this.quantidadePublicacoes);
-
-    }
-
-    public String introduzirDados(){
-        return this.nome;
-    }
-
-    public int obterQuantidadePublicacoes(){
-        return this.quantidadePublicacoes;
     }
 }
