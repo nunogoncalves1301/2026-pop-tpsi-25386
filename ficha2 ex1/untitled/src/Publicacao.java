@@ -1,4 +1,4 @@
-public class Publicacao {
+public abstract class Publicacao {
     private String nome;
     private static int quantidadePublicacoes = 0; // Variável de classe (static)
     private int numeroPublicacao;
