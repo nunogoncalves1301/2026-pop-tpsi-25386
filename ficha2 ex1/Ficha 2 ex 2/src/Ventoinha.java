@@ -1,42 +1,46 @@
 public class Ventoinha {
-    private boolean ventoinhaLigada;
-    private Velocidade Velocidade;
 
+    // Atributos
+    private boolean ventoinhaLigada;
+    private Velocidade velocidadeVentoinha;
+
+    // Construtor sem argumentos
     public Ventoinha() {
         this.ventoinhaLigada = false;
-        this.Velocidade = Velocidade.BAIXA;
+        this.velocidadeVentoinha = Velocidade.BAIXA; // valor por defeito pedido no exercicio
     }
 
-    public Velocidade getVelocidade() {
-        return Velocidade;
+    // Getter e Setter para velocidadeVentoinha
+    public Velocidade getVelocidadeVentoinha() {
+        return velocidadeVentoinha;
     }
 
-    public void setVelocidade(Velocidade velocidade) {
-        Velocidade = velocidade;
+    public void setVelocidadeVentoinha(Velocidade velocidadeVentoinha) {
+        this.velocidadeVentoinha = velocidadeVentoinha;
     }
 
-    public boolean getVentoinhaLigada() {
-        if (ventoinhaLigada == true) {
-            System.out.println("Ventoinha ligada.");
-        } else {
-            System.out.println("Ventoinha desligada.");
-        }
+    // Getter para ventoinhaLigada
+    public boolean ventoinhaLigada() {
         return ventoinhaLigada;
     }
 
-    public void setLigar(boolean ligar) {
-        this.ventoinhaLigada = ligar;
+    // Ligar
+    public void ligar() {
+        this.ventoinhaLigada = true;
+        System.out.println("Ventoinha ligada.");
     }
 
-    public void setDesligar(boolean desligar) {
-        this.ventoinhaLigada = desligar;
+    // desligar
+    public void desligar() {
+        this.ventoinhaLigada = false;
+        System.out.println("Ventoinha desligada.");
     }
 
+    // toString
+    @Override
     public String toString() {
-        System.out.println("A ventoinha está " + ventoinhaLigada);
-        if (ventoinhaLigada == true) {
-            System.out.println("A uma velocidade" + Velocidade);
-        }
-        return Velocidade.toString();
+        return "\nVentoinha: \n" +
+                "ligada = " + ventoinhaLigada +
+                ", velocidade = " + velocidadeVentoinha;
     }
 }
